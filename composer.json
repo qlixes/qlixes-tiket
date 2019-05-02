@@ -1,0 +1,20 @@
+{
+    "name": "qlixes/qlixes-tiket",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "nesbot/carbon": "^2.17"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "qlixes",
+            "email": "qlixess@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "qlixes\\Tiket\\":"src/"
+        }
+    }
+}
