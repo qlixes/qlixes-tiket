@@ -10,7 +10,7 @@ class Tiket extends Base
     var $secret;
     var $output;
     var $lang;
-    
+
     function __construct($uri, $api_secret, $output = 'array', $lang = 'id')
     {
         $this->client = $this->getBaseUri($uri);
@@ -44,10 +44,10 @@ class Tiket extends Base
             $query['d'] = $params['departure_code'];
         if(params['arrival_code'])
             $query['a'] = $params['arrival_code'];
-        
+
         if(params['departure_date'])
             $query['date'] = $params['departure_date'];
-        
+
         if(params['return_date'])
             $query['ret_date'] = $params['return_date'];
         else
@@ -59,7 +59,7 @@ class Tiket extends Base
             $query['child'] = $params['children'];
         if(params['baby'])
             $query['infant'] = $params['baby'];
-        
+
         if(params['version'])
             $query['v'] = $params['version'];
 
@@ -68,7 +68,7 @@ class Tiket extends Base
 
         if($params['lion_captcha'])
             $query['lioncaptcha'] = $params['lion_captcha'];
-        
+
         if($params['lion_session'])
             $query['lionsessionid'] = $params['lion_session'];
 
@@ -77,9 +77,9 @@ class Tiket extends Base
 
         if($params['return_flight_id'])
             $query['ret_flight_id'] = $params['return_flight_id'];
-        
+
         $this->options['query'] = array_merge($query, $this->query);
-        
+
         return $this;
     }
 
